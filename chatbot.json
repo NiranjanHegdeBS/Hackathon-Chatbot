@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "relationId": "",
+    "que": "Hello! Welcome to Dover Chat Support! How can we help you today?",
+    "options": [
+      {
+        "key": "2",
+        "value": "Creating Workorder"
+      },
+      {
+        "key": "3",
+        "value": "Performing Prescan"
+      },
+      {
+        "key": "4",
+        "value": "Performing Calibration"
+      },
+      {
+        "key": "5",
+        "value": "Others"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "relationId": "1",
+    "que": "Are you able to select Calibration Provider and Scan tool?",
+    "options": [
+      {
+        "key": "6",
+        "value": "Yes"
+      },
+      {
+        "key": "7",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "relationId": "4",
+    "que": "Where are you facing the issue?",
+    "options": [
+      {
+        "key": "8",
+        "value": "Preparation Confirmation"
+      },
+      {
+        "key": "9",
+        "value": "Postion Confirmation"
+      },
+      {
+        "key": "10",
+        "value": "Postion Steps"
+      },
+      {
+        "key": "11",
+        "value": "Others"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "relationId": "6",
+    "que": "Which step are you facing the issue?",
+    "options": [
+      {
+        "key": "12",
+        "value": "Stage Vehicle"
+      },
+      {
+        "key": "13",
+        "value": "Attach Clamp"
+      },
+      {
+        "key": "14",
+        "value": "Check Car Position"
+      },
+      {
+        "key": "15",
+        "value": "Target Postion"
+      },
+      {
+        "key": "16",
+        "value": "Calibration"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "relationId": "10",
+    "que": "Are you facing issue with Target not matched?",
+    "options": [
+      {
+        "key": "17",
+        "value": "Yes"
+      },
+      {
+        "key": "18",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "relationId": "15",
+    "que": "Ohh!! Looks like you have placed wrong target in front of vehicle. Please place the correct target in front of vehicle.",
+    "options": [
+      {
+        "key": "19",
+        "value": "Sure"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "relationId": "17",
+    "que": "Is your issue resolved? or you need further assistant?",
+    "options": [
+      {
+        "key": "20",
+        "value": "Yes, Resloved!"
+      },
+      {
+        "key": "21",
+        "value": "Need more help!"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "relationId": "19",
+    "que": "Thank you for connecting with us. Have a great day!",
+    "options": []
+  }
+]
