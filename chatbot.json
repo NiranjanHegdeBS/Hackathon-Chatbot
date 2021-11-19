@@ -2,7 +2,7 @@
   {
     "id": "1",
     "relationId": "",
-    "que": "Hello! Welcome to Dover Chat Support! How can we help you today?",
+    "que": "Welcome to Dover Chat Support! How can we help you today?",
     "options": [
       {
         "key": "2",

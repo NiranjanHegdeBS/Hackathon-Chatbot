@@ -3,6 +3,7 @@ import json
 app = Flask(__name__)
 
 chatbot_qa = json.loads(open('chatbot.json').read())
+username = "Mike"
 
 @app.route("/")
 def home():
@@ -13,21 +14,27 @@ def chatbot_response():
     response_msg = {}
 
     if request.method == "GET":
+        greeting = f"Hello {username}!"
         question = chatbot_qa[0]["que"]
         follow_up = chatbot_qa[0]["options"]
-        response_msg = {"question":question,"follow_up":follow_up}
+        response_msg = {"greeting":greeting,"question":question,"follow_up":follow_up}
         
     elif request.method == "POST":
         user_option_info = request.get_json()
-        key = -1
-        for i in range(len(chatbot_qa)):
-            if int(chatbot_qa[i]["id"]) == user_option_info["key"]:
-                key = i
-                break
-              
-        question = chatbot_qa[key]["que"]
-        follow_up = chatbot_qa[key]["options"]
-        response_msg = {"question":question,"follow_up":follow_up}
+        if "key" in user_option_info:
+            key = -1
+            for i in range(len(chatbot_qa)):
+                if int(chatbot_qa[i]["id"]) == user_option_info["key"]:
+                    key = i
+                    break
+                
+            question = chatbot_qa[key]["que"]
+            follow_up = chatbot_qa[key]["options"]
+            response_msg = {"question":question,"follow_up":follow_up}
+
+        elif "message" in user_option_info:
+            msg = user_option_info["message"]
+            responseText = MessageAnalyser(msg)
     
     return(jsonify(response_msg))
     
