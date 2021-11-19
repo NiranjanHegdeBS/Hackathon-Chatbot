@@ -1,6 +1,12 @@
 from flask import Flask, request, jsonify
 import json
+from flask_cors import CORS, cross_origin
+#from utils import MessageAnalysis as MessageAnalysis
 app = Flask(__name__)
+
+cors = CORS(app,resources={r"/api/*": {"origins": "*"}})
+
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 chatbot_qa = json.loads(open('chatbot.json').read())
 username = "Mike"
@@ -32,9 +38,9 @@ def chatbot_response():
             follow_up = chatbot_qa[key]["options"]
             response_msg = {"question":question,"follow_up":follow_up}
 
-        elif "message" in user_option_info:
-            msg = user_option_info["message"]
-            responseText = MessageAnalyser(msg)
+        # elif "message" in user_option_info:
+        #     msg = user_option_info["message"]
+        #     responseText = MessageAnalysis.MessageAnalyser(msg)
     
     return(jsonify(response_msg))
     
