@@ -133,5 +133,89 @@
     "relationId": "19",
     "que": "Thank you for connecting with us. Have a great day!",
     "options": []
+  },
+  {
+    "id": "5",
+    "relationId": "1",
+    "quetion": "Are you facing issue with one of below",
+    "options": [
+      {
+        "key": "22",
+        "value": "Connection Issue"
+      },
+      {
+        "key": "23",
+        "value": "Target Association"
+      },
+      {
+        "key": "24",
+        "value": "Unexpected Error"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "relationId": "5",
+    "que": "Are you getting message like 'Following Targets are not associated with repair shop - #TargetID Please contact technical support'?",
+    "options": [
+      {
+        "key": "25",
+        "value": "Yes"
+      },
+      {
+        "key": "26",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "relationId": "23",
+    "que": "Please provide workorder number",
+    "options": []
+  },
+  {
+    "id": "27",
+    "relationId": "25",
+    "que": "Looks like Target is not propely added for this Repair Shop in Cloud UI",
+    "options": [
+      {
+        "key": "28",
+        "value": "Sure"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "relationId": "27",
+    "que": "Is your issue resolved? or you need further assistant?",
+    "options": [
+      {
+        "key": "29",
+        "value": "Yes, Resloved!"
+      },
+      {
+        "key": "30",
+        "value": "Need more help!"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "relationId": "28",
+    "que": "Thank you for connecting with us. Have a great day!",
+    "options": []
+  },
+  {
+    "id": "30",
+    "relationId": "28",
+    "que": "Thank you for contacting us. Our support team will reach to you soon! Have a great day!",
+    "options": []
+  },
+  {
+    "id": "24",
+    "relationId": "5",
+    "quetion": "Please provide Workorder number, Our support team will reach to you soon! Thank you for connecting with us. Have a great day!",
+    "options": []
   }
 ]
