@@ -137,7 +137,7 @@
   {
     "id": "5",
     "relationId": "1",
-    "quetion": "Are you facing issue with one of below",
+    "que": "Are you facing issue with one of below",
     "options": [
       {
         "key": "22",
